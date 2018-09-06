@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>408</width>
+    <height>293</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLineEdit" name="txt_nombre">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>20</y>
+      <width>171</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 1px solid black;
+border-radius: 10px;
+</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>62</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Genero:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>50</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Estado Civil:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Nombre:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_registrar">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>220</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Registrar</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>90</y>
+      <width>120</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string/>
+    </property>
+    <widget class="QRadioButton" name="rb_hombre">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>30</y>
+       <width>82</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Hombre</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="rb_indefinido">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>90</y>
+       <width>82</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Indefinido</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="rb_mujer">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>60</y>
+       <width>82</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Mujer</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>80</y>
+      <width>101</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string/>
+    </property>
+    <widget class="QRadioButton" name="rb_union_libre">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>110</y>
+       <width>82</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Unión Libre</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="rb_soltero">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>82</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Soltero</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="rb_casado">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>50</y>
+       <width>82</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Casado</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="rb_divorciado">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>80</y>
+       <width>82</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Divorciado</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>20</y>
+      <width>113</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>408</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuArchivo">
+    <property name="title">
+     <string>Archivo</string>
+    </property>
+    <widget class="QMenu" name="menuAbrir_Ventanas">
+     <property name="title">
+      <string>Abrir Ventanas</string>
+     </property>
+     <addaction name="actionVentana_2"/>
+    </widget>
+    <addaction name="actionAbrir"/>
+    <addaction name="actionGuardar"/>
+    <addaction name="menuAbrir_Ventanas"/>
+   </widget>
+   <addaction name="menuArchivo"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionAbrir">
+   <property name="text">
+    <string>Abrir</string>
+   </property>
+  </action>
+  <action name="actionGuardar">
+   <property name="text">
+    <string>Guardar</string>
+   </property>
+  </action>
+  <action name="actionVentana_2">
+   <property name="text">
+    <string>Ventana 2</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

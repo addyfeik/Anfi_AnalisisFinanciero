@@ -1,6 +1,6 @@
 '''
     Persona:
-    - Id
+    - ID
     - Nombre
     - Apellido Paterno
     - Apellido Materno
@@ -10,6 +10,7 @@
         Fecha
         Cantidad
         Conceptos
+
     Procesos:
     - Cantidad
     - Concepto
@@ -38,93 +39,64 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
         Ui_MainWindow.__init__(self) #convierte el ui a codigo entendible en python
         self.setupUi(self) #carga el codigo convertido
 
+#Nombre de las tablas en minusculas
+#Ruta C:\Users\Cavazos\Desktop\SistemaAnalisisBancario\BankOperationRisk\Anfi_AnalisisFinanciero\View
         #VARIABLES
         self.ID=int()
         self.cont=int()
-        #ESTRUCTURAS DE DATOS
-        self.Persona={'ID':1,'nombre':"usuario1",'apellido_paterno':"usuario1", 'apellido_materno':"Lopez",'RFC':'1000' }
-        # El {self.Persona['Id']... redirecciona al ID del objeto persona que se creo y sera su clave al diccionario
-        # personas para encontrar el objeto persona ...:self.Persona...
-        self.Personas={self.Persona['ID']:self.Persona}
+        self.nombre=str()
+        self.apellido_paterno=str()
+        self.apellido_materno=str()
+        self.RFC=str()
+        self.init_listeners()
 
 
-    #EStos datos son de pruba para tener el Id[1] y Id[2]
-        self.Persona = {'ID': 2, 'nombre': "usuario2", 'apellido_paterno': "apellido2", 'apellido_materno': "apellido2",
-                        'RFC': '2000'}
-        # El {self.Persona['Id']... redirecciona al ID del objeto persona que se creo y sera su clave al diccionario
-        # personas para encontrar el objeto persona ...:self.Persona...
-        self.Personas={self.Persona['ID']:self.Persona}
-
-
-
-
-
-        #LISTENERS
-        #Este crea un listener para conectar a un slot cuando dispare la accion click
-        # del push button OK que esta diseñado en pyQt designer
-        #Ojo debe llamarse igual que el object name de PYqt, en el caso del slot no hay pro
+    def init_listeners(self):
         self.pb_OK.clicked.connect(self.ok)
+    # ----------------------------------------------------------------------------------------------------------------------#
 
-        self.sb_ID.setMinimum(1)
-        self.sb_ID.setMaximum(50)
+    def getnombre(self):
+        return str(self.le_nombre.text())
+    def getapellido_paterno(self):
+        return str(self.le_apellido_paterno.text())
+    def getapellido_materno(self):
+        return str(self.le_apellido_materno.text())
+    def getconcepto(self):
+        return str(self.le_concepto.text())
+    def getmovimiento(self):
+        return str(self.movimiento.text())
+    def getcantidad(self):
+        return str(self.le_cantidad.text())
+    def getfecha(self):
+        return str(self.le_apellido_paterno.text())
 
-        self.sb_ID.setSingleStep(1)
-        self.sb_ID.setValue(0)
-        self.sb_ID.valueChanged.connect(self.llenar_campos)
+    def movimiento(self):
+        #Esta funcion va a regresar el tipo de movimiento si es enable is 1 ingresos y 0 egresos
+        print("movimiento")
 
-#----------------------------------------------------------------------------------------------------------------------#
+
+
+    #----------------------------------------------------------------------------------------------------------------------#
 #Listeners
 
-    #Spinner Box "Id"
+        # Push button "Ok"
+    def ok(self):
+        #Impresion de nombre
+        print("Push ok...")
+        print(self.getnombre())
+
+        # ----------------------------------------------------------------------------------------------------------------------#
+
+    #Spinner Box "ID"
+    #este es un slot del spinner box para cambiar el id
     def llenar_campos(self):
-        #Aqui busco el valor del ID del
+        #Aqui busco el valor del ID
+        ######################andamos cagando en esta puta linea me caga#####################
         try:
-
-            self.ID = int(self.sb_id.value())
-            print("Id buscado: " + str(self.ID))
-            print(self.Personas.get(self.ID))
-            #Mostrando en line edit
-
-
-
-
+            print(int(self.sb_ID.value))
         except:
             e = sys.exc_info()[0]
             print("<p>Error: %s</p>" % e)
-
-    #Push button "Ok"
-    def ok(self):
-        #El diccionario Personas guarda a una persona.
-        # Acceder a sus atributos mediante su ID.
-
-        #Aqui solo los estoy imprimiendo para verificar si existen
-
-        self.Personas[self.ID]=self.ID
-        print("OK")
-
-        self.Persona["ID"] = self.ID
-        self.Persona["apellido_paterno"] = self.le_apellido_paterno.text()
-        self.Persona["apellido_materno"] = self.le_apellido_materno.text()
-        self.Persona["nombre"] = self.le_nombre.text()
-
-        self.Personas[self.ID]=self.Persona
-
-       #En mantenimiento
-        '''self.Persona.append(self.le_nombre.text())
-        self.Persona.append(self.le_apellido_paterno.text())
-        self.Persona.append(self.le_apellido_materno.text())
-        self.Persona.append(self.le_concepto.text())
-        print("OK")'''
-
-#----------------------------------------------------------------------------------------------------------------------#
-
-    def mostrar_Personas(self,):
-        self.le_nombre.setText(str(self.Personas.get(self.ID).get('nombre', 'null')))
-        self.le_apellido_materno.setText(str(self.Personas.get(self.ID).get('apellido_materno', 'null')))
-        self.le_apellido_paterno.setText(str(self.Personas.get(self.ID).get('apellido_paterno', 'null')))
-
-
-
 
 #----------------------------------------------------------------------------------------------------------------------#
 
